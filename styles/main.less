@@ -1,0 +1,40 @@
+@done-color: #1fb427;
+@remove-color: rgb(231, 65, 65);
+@input-border-color: rgb(202, 202, 202);
+@input-border-color-focus: @done-color;
+
+body {
+    font-size: 1.2em;
+}
+
+.todolist-done .todolist-item-body {
+    color: @done-color;
+    text-decoration: line-through;
+}
+
+.todolist-remove {
+    color: @remove-color;
+}
+
+.todolist-items li:hover {
+    cursor: pointer;
+}
+
+.todolist-input {
+    outline: 0;
+    padding: 5px;
+    border: 2px solid @input-border-color;
+    &:focus {
+        border: 2px solid @input-border-color-focus;
+    }
+}
+
+.todolist-error .todolist-input {
+    border: 1px solid @remove-color;
+    box-shadow: 0 0 2px @remove-color;
+    outline: 0;
+}
+
+.todolist-errors {
+    color: @remove-color;
+}
